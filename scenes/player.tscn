@@ -1,0 +1,173 @@
+[gd_scene format=3 uid="uid://ixllni7c42ym"]
+
+[ext_resource type="PackedScene" uid="uid://c4fitfbgfuvfh" path="res://scenes/superhero_female_full_body.tscn" id="1_3vyb7"]
+[ext_resource type="Script" uid="uid://d2d2jn0hahsm8" path="res://scenes/player.gd" id="1_g2els"]
+[ext_resource type="Animation" uid="uid://qs5bygudv8gb" path="res://Punch_Cross_Animation.res" id="3_dqkch"]
+[ext_resource type="Animation" uid="uid://oa1307l3a8ah" path="res://Punch_Jab_Animation.res" id="4_qlg0r"]
+[ext_resource type="Animation" uid="uid://bxui73akdbtry" path="res://flying.res" id="5_qlg0r"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_qhqgy"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_g2els"]
+
+[sub_resource type="Animation" id="Animation_dqkch"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Armature/GeneralSkeleton/LeftHandAttachment/LeftHitbox/CollisionShape3D:disabled")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Armature/GeneralSkeleton/RightHandAttachment/RightHitbox/CollisionShape3D:disabled")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_tuyoq"]
+resource_name = "new_animation"
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_qlg0r"]
+_data = {
+&"RESET": SubResource("Animation_dqkch"),
+&"new_animation": SubResource("Animation_tuyoq")
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_smehm"]
+_data = {
+&"Punch_Cross_Animation": ExtResource("3_dqkch"),
+&"Punch_Jab_Animation": ExtResource("4_qlg0r")
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_fjrip"]
+_data = {
+&"flying": ExtResource("5_qlg0r")
+}
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_dqkch"]
+height = 1.6541992
+radius = 0.4
+
+[node name="Player" type="CharacterBody3D" unique_id=494202448]
+script = ExtResource("1_g2els")
+can_freefly = true
+
+[node name="MeshRoot" type="Node3D" parent="." unique_id=1794246585]
+
+[node name="Superhero_Female_FullBody" parent="MeshRoot" unique_id=1828558838 instance=ExtResource("1_3vyb7")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
+
+[node name="GeneralSkeleton" parent="MeshRoot/Superhero_Female_FullBody/Armature" parent_id_path=PackedInt32Array(1828558838, 1628957112) index="0" unique_id=80881318]
+bones/1/position = Vector3(0.005404526, 0.8916213, -0.08791916)
+bones/1/rotation = Quaternion(-0.04628033, -0.11588846, -0.005405691, 0.9921687)
+bones/2/rotation = Quaternion(0.017957624, -0.009888708, -0.0042376267, 0.9997809)
+bones/3/rotation = Quaternion(0.09260246, 0.000112654714, 0.00025388045, 0.99570316)
+bones/4/rotation = Quaternion(0.092602395, 0.00032065847, 0.00024720546, 0.9957031)
+bones/5/rotation = Quaternion(-0.09260248, -0.00021697924, -0.0002602538, 0.9957031)
+bones/6/rotation = Quaternion(0.07725409, 0.0957206, 0.007964551, 0.99237394)
+bones/7/rotation = Quaternion(0.48748106, 0.52661544, 0.52638143, -0.4560275)
+bones/8/rotation = Quaternion(-0.06222128, 0.8176802, -0.5722163, 0.00980104)
+bones/9/rotation = Quaternion(0.18998532, -0.651041, 0.18306458, 0.7117153)
+bones/10/rotation = Quaternion(0.09913024, 0.70686626, 0.0629003, 0.69753635)
+bones/11/rotation = Quaternion(0.6295969, -4.0978193e-08, -4.61936e-06, 0.77692205)
+bones/12/rotation = Quaternion(0.62334186, 2.9802322e-08, -4.261732e-06, 0.78194946)
+bones/13/rotation = Quaternion(0.62334144, -2.2351742e-07, -4.4703484e-06, 0.78194976)
+bones/15/rotation = Quaternion(0.6288943, -0.0297349, -4.470348e-06, 0.7769219)
+bones/16/rotation = Quaternion(0.6227327, -0.02755458, -4.410744e-06, 0.7819494)
+bones/17/rotation = Quaternion(0.6226684, -0.028961532, -4.4703493e-06, 0.78194976)
+bones/19/rotation = Quaternion(0.6630008, -0.044529784, 0.07369417, 0.7436506)
+bones/20/rotation = Quaternion(0.6203661, -0.06229401, 0.015573084, 0.7816796)
+bones/21/rotation = Quaternion(0.62192154, -0.04205184, -4.4703484e-06, 0.78194964)
+bones/23/rotation = Quaternion(0.6291978, -0.022414071, -4.202128e-06, 0.77692205)
+bones/24/rotation = Quaternion(0.6229472, -0.022176376, -4.321337e-06, 0.78194946)
+bones/25/rotation = Quaternion(0.6228982, -0.023505477, -4.5001498e-06, 0.7819497)
+bones/27/rotation = Quaternion(-0.123819165, 0.7195233, 0.2018354, 0.65285325)
+bones/28/rotation = Quaternion(0.18180694, 0.11012423, 0.060063303, 0.9753006)
+bones/29/rotation = Quaternion(0.5994299, 0.27396563, 0.19463211, 0.7264606)
+bones/30/scale = Vector3(1.0001454, 1.0004877, 1.0005833)
+bones/31/rotation = Quaternion(0.53972095, -0.47448963, -0.47470158, -0.5081529)
+bones/32/rotation = Quaternion(0.089077465, 0.82466066, -0.5584877, -0.009565941)
+bones/33/rotation = Quaternion(0.29214105, 0.54285806, -0.20492761, 0.760239)
+bones/34/rotation = Quaternion(0.12024976, -0.69903094, -0.056890074, 0.702609)
+bones/35/rotation = Quaternion(0.6295971, 3.7252903e-08, 4.172325e-06, 0.7769218)
+bones/36/rotation = Quaternion(0.62334144, 1.825392e-07, 4.470348e-06, 0.7819497)
+bones/37/rotation = Quaternion(0.62334156, 1.00582824e-07, 4.2319293e-06, 0.78194964)
+bones/38/rotation = Quaternion(4.6566093e-09, 1, 4.295285e-08, -5.7654454e-08)
+bones/39/rotation = Quaternion(0.6288947, 0.029734796, 4.351139e-06, 0.77692175)
+bones/40/rotation = Quaternion(0.62273216, 0.027554482, 4.5001507e-06, 0.78194976)
+bones/41/rotation = Quaternion(0.62266874, 0.028961398, 4.3213377e-06, 0.78194946)
+bones/43/rotation = Quaternion(0.6630007, 0.044529956, -0.07369393, 0.7436508)
+bones/44/rotation = Quaternion(0.62036633, 0.06229363, -0.015572906, 0.7816794)
+bones/45/rotation = Quaternion(0.62192184, 0.04205143, 4.4703484e-06, 0.7819494)
+bones/46/rotation = Quaternion(-0.033750083, 0.99943036, 4.924054e-08, -5.6300305e-08)
+bones/47/rotation = Quaternion(0.6291981, 0.022413792, 4.11272e-06, 0.7769218)
+bones/48/rotation = Quaternion(0.62294656, 0.022176204, 4.470349e-06, 0.7819501)
+bones/49/rotation = Quaternion(0.6228987, 0.02350526, 4.1723247e-06, 0.7819493)
+bones/50/rotation = Quaternion(-0.018857837, 0.99982214, -1.5216912e-08, -2.3691528e-07)
+bones/51/rotation = Quaternion(-0.12381923, -0.7195234, -0.2018356, 0.6528533)
+bones/52/rotation = Quaternion(0.18180703, -0.11012423, -0.060063303, 0.97530067)
+bones/53/rotation = Quaternion(0.5994302, -0.2739653, -0.19463223, 0.7264605)
+bones/54/scale = Vector3(1.0001454, 1.0004876, 1.0005835)
+bones/55/rotation = Quaternion(-0.00077796273, 0.12214074, 0.98626107, -0.11122178)
+bones/56/rotation = Quaternion(0.016344335, 0.98224515, -0.14901444, 0.11279213)
+bones/57/rotation = Quaternion(-0.09455208, 0.7292354, -0.67767, 0.006254539)
+bones/58/rotation = Quaternion(4.664862e-08, 1, 5.9604645e-08, 2.7766912e-08)
+bones/60/rotation = Quaternion(0.0008066073, -0.110076316, 0.9872104, 0.11531823)
+bones/61/rotation = Quaternion(-0.028729852, 0.92896134, -0.08071508, -0.36012587)
+bones/62/rotation = Quaternion(0.17156829, 0.646951, -0.74297434, -0.0027946231)
+bones/63/rotation = Quaternion(-6.703263e-08, 1, 8.940697e-08, 2.1454163e-09)
+
+[node name="LeftHandAttachment" type="BoneAttachment3D" parent="MeshRoot/Superhero_Female_FullBody/Armature/GeneralSkeleton" index="3" unique_id=1033731323]
+transform = Transform3D(0.49987823, 0.021482311, -0.8658292, -0.35865402, -0.9048149, -0.22951524, -0.7883459, 0.4252627, -0.4445925, 0.28307122, 0.9289489, 0.004939705)
+bone_name = "LeftHand"
+bone_idx = 10
+
+[node name="LeftHitbox" type="Area3D" parent="MeshRoot/Superhero_Female_FullBody/Armature/GeneralSkeleton/LeftHandAttachment" unique_id=280820086]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshRoot/Superhero_Female_FullBody/Armature/GeneralSkeleton/LeftHandAttachment/LeftHitbox" unique_id=1359969694]
+transform = Transform3D(0.15, 0, 0, 0, 0.15, 0, 0, 0, 0.15, 0, 0, 0)
+shape = SubResource("BoxShape3D_qhqgy")
+
+[node name="RightHandAttachment" type="BoneAttachment3D" parent="MeshRoot/Superhero_Female_FullBody/Armature/GeneralSkeleton" index="4" unique_id=32130944]
+transform = Transform3D(0.05968181, -0.16210781, 0.98496634, 0.45092264, -0.87593424, -0.17148575, 0.8905653, 0.45437828, 0.020820815, -0.24773595, 0.95314795, -0.16530123)
+bone_name = "RightHand"
+bone_idx = 34
+
+[node name="RightHitbox" type="Area3D" parent="MeshRoot/Superhero_Female_FullBody/Armature/GeneralSkeleton/RightHandAttachment" unique_id=95276840]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshRoot/Superhero_Female_FullBody/Armature/GeneralSkeleton/RightHandAttachment/RightHitbox" unique_id=1863496138]
+transform = Transform3D(0.15, 0, 0, 0, 0.15, 0, 0, 0, 0.15, 0, 0, 0)
+shape = SubResource("BoxShape3D_g2els")
+
+[node name="AnimationPlayer" parent="MeshRoot/Superhero_Female_FullBody" index="1" unique_id=929506655]
+libraries/ = SubResource("AnimationLibrary_qlg0r")
+libraries/Punch = SubResource("AnimationLibrary_smehm")
+libraries/Superhero = SubResource("AnimationLibrary_fjrip")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=903528196]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.82290035, 0)
+shape = SubResource("CylinderShape3D_dqkch")
+
+[node name="CameraMount" type="Node3D" parent="." unique_id=1149009190]
+transform = Transform3D(0.99999994, 0, 0, 0, 1, 0, 0, 0, 0.99999994, 0, 1.3000001, 0)
+
+[node name="Camera3D" type="Camera3D" parent="CameraMount" unique_id=1757285145]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.41349673, 0, 1.4478029)
+
+[connection signal="body_entered" from="MeshRoot/Superhero_Female_FullBody/Armature/GeneralSkeleton/LeftHandAttachment/LeftHitbox" to="." method="_on_left_hitbox_body_entered"]
+[connection signal="body_entered" from="MeshRoot/Superhero_Female_FullBody/Armature/GeneralSkeleton/RightHandAttachment/RightHitbox" to="." method="_on_right_hitbox_body_entered"]
+
+[editable path="MeshRoot/Superhero_Female_FullBody"]

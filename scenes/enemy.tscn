@@ -1,0 +1,91 @@
+[gd_scene format=3 uid="uid://bjhfg2tc58e8k"]
+
+[ext_resource type="PackedScene" uid="uid://bjfs2vs6km8u4" path="res://scenes/superhero_male_full_body.tscn" id="1_7p1mj"]
+[ext_resource type="Script" uid="uid://slxgvj8la6ts" path="res://scenes/enemy.gd" id="1_c4w8v"]
+[ext_resource type="Animation" uid="uid://qs5bygudv8gb" path="res://Punch_Cross_Animation.res" id="2_5uy6h"]
+[ext_resource type="Animation" uid="uid://oa1307l3a8ah" path="res://Punch_Jab_Animation.res" id="3_c4w8v"]
+[ext_resource type="AnimationLibrary" uid="uid://bxjwmmq01o1qx" path="res://assets/Universal Animation Library[Standard]/Unreal-Godot/UAL1_Standard.glb" id="4_xwavj"]
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_nenq2"]
+_data = {
+&"Punch_Cross_Animation": ExtResource("2_5uy6h"),
+&"Punch_Jab_Animation": ExtResource("3_c4w8v")
+}
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_c4w8v"]
+height = 1.6743164
+
+[node name="Enemy" type="CharacterBody3D" unique_id=1035998510 groups=["Enemy"]]
+script = ExtResource("1_c4w8v")
+
+[node name="Superhero_Male_FullBody" parent="." unique_id=1580329287 instance=ExtResource("1_7p1mj")]
+
+[node name="GeneralSkeleton" parent="Superhero_Male_FullBody/Armature" parent_id_path=PackedInt32Array(1580329287, 1095779165) index="0" unique_id=145615431]
+bones/1/position = Vector3(0.018598013, 0.85426676, -0.022805136)
+bones/1/rotation = Quaternion(-0.22014764, -0.1104461, -0.011402168, 0.9691268)
+bones/3/rotation = Quaternion(0.2787909, 0.0008799089, 0.01916558, 0.96016014)
+bones/4/rotation = Quaternion(0.11669806, 0.0048739864, 0.019057186, 0.9929726)
+bones/5/rotation = Quaternion(-0.047028534, -0.0050741453, -0.018899037, 0.99870193)
+bones/6/rotation = Quaternion(0.10616954, 0.08625397, 0.010048693, 0.990549)
+bones/7/rotation = Quaternion(0.4040215, 0.5999315, 0.52660096, -0.44669932)
+bones/8/rotation = Quaternion(0.464581, 0.83743757, -0.287817, 0.0049298704)
+bones/9/rotation = Quaternion(0.2458424, -0.50380826, 0.81033605, 0.17057091)
+bones/10/rotation = Quaternion(0.120993435, 0.7115486, 0.034799393, 0.69126576)
+bones/11/rotation = Quaternion(0.6295966, -2.6077036e-08, -4.202128e-06, 0.7769223)
+bones/12/rotation = Quaternion(0.6233422, -4.8801303e-07, -4.4107437e-06, 0.7819492)
+bones/13/rotation = Quaternion(0.6233418, -9.685755e-08, -4.61936e-06, 0.7819495)
+bones/15/rotation = Quaternion(0.62889415, -0.029734889, -4.3213367e-06, 0.77692217)
+bones/16/rotation = Quaternion(0.6227327, -0.027554609, -4.6193604e-06, 0.7819494)
+bones/17/rotation = Quaternion(0.6226688, -0.028961513, -4.2021284e-06, 0.78194934)
+bones/19/rotation = Quaternion(0.66300035, -0.0445298, 0.07369399, 0.74365103)
+bones/20/rotation = Quaternion(0.6203665, -0.062294107, 0.015573382, 0.7816792)
+bones/21/rotation = Quaternion(0.62192154, -0.042051893, -4.7683716e-06, 0.78194964)
+bones/23/rotation = Quaternion(0.6291976, -0.022413978, -4.2617316e-06, 0.77692217)
+bones/24/rotation = Quaternion(0.6229473, -0.022176338, -4.5299535e-06, 0.78194946)
+bones/25/rotation = Quaternion(0.62289864, -0.023505345, -4.4107433e-06, 0.7819494)
+bones/27/rotation = Quaternion(-0.12381923, 0.71952313, 0.20183587, 0.6528534)
+bones/28/rotation = Quaternion(0.18180753, 0.11012465, 0.060062677, 0.97530055)
+bones/29/rotation = Quaternion(0.5994297, 0.2739653, 0.19463275, 0.7264607)
+bones/30/scale = Vector3(1.0001457, 1.0004877, 1.0005835)
+bones/31/rotation = Quaternion(0.53133965, -0.47631308, -0.47300616, -0.51678747)
+bones/32/rotation = Quaternion(-0.4104788, 0.832757, -0.37146017, -0.0063624987)
+bones/33/rotation = Quaternion(0.43829983, 0.41400987, -0.759398, 0.24454865)
+bones/34/rotation = Quaternion(0.1202496, -0.69903094, -0.056890078, 0.702609)
+bones/35/rotation = Quaternion(0.62959695, -1.2665987e-07, 4.172325e-06, 0.776922)
+bones/36/rotation = Quaternion(0.62334174, 3.98606e-07, 4.3511386e-06, 0.7819495)
+bones/37/rotation = Quaternion(0.6233412, -1.0803342e-07, 4.7683716e-06, 0.78195)
+bones/38/rotation = Quaternion(-2.465094e-08, 1, 5.5879347e-08, -8.734059e-08)
+bones/39/rotation = Quaternion(0.6288943, 0.029734643, 4.202127e-06, 0.7769219)
+bones/40/rotation = Quaternion(0.62273264, 0.027554728, 4.5001507e-06, 0.7819494)
+bones/41/rotation = Quaternion(0.62266797, 0.028961115, 4.5895586e-06, 0.78195)
+bones/42/rotation = Quaternion(-0.02323703, 0.99973005, 1.1175873e-08, -1.4707622e-07)
+bones/43/rotation = Quaternion(0.663001, 0.044529676, -0.07369412, 0.7436505)
+bones/44/rotation = Quaternion(0.6203662, 0.062293883, -0.015573144, 0.7816795)
+bones/45/rotation = Quaternion(0.62192166, 0.04205165, 4.440546e-06, 0.78194964)
+bones/46/rotation = Quaternion(-0.033750113, 0.99943036, 7.4505815e-09, -1.313747e-07)
+bones/47/rotation = Quaternion(0.62919796, 0.022413777, 4.202127e-06, 0.7769218)
+bones/48/rotation = Quaternion(0.62294686, 0.022176344, 4.261732e-06, 0.78194976)
+bones/49/rotation = Quaternion(0.6228989, 0.023505703, 4.2021275e-06, 0.7819492)
+bones/50/rotation = Quaternion(-0.018857867, 0.9998222, 7.2643154e-08, -2.0410513e-07)
+bones/51/rotation = Quaternion(-0.12381952, -0.7195234, -0.2018354, 0.6528533)
+bones/52/rotation = Quaternion(0.18180709, -0.11012426, -0.060063697, 0.9753006)
+bones/53/rotation = Quaternion(0.59942997, -0.2739655, -0.1946319, 0.7264607)
+bones/54/scale = Vector3(1.0001453, 1.0004876, 1.0005833)
+bones/55/rotation = Quaternion(-0.0007602944, 0.016684523, 0.9939346, -0.10869739)
+bones/56/rotation = Quaternion(0.03328817, 0.9384122, -0.33008075, 0.096547194)
+bones/57/rotation = Quaternion(-0.09793134, 0.64308834, -0.75924945, -0.019676182)
+bones/58/rotation = Quaternion(5.039409e-08, 1, 5.9604645e-08, 2.6820256e-08)
+bones/60/rotation = Quaternion(0.0013939757, -0.26075774, 0.9446082, 0.19929586)
+bones/61/rotation = Quaternion(-0.066825345, 0.92327434, -0.19851227, -0.32201192)
+bones/62/rotation = Quaternion(0.20690238, 0.5845766, -0.78446716, -0.00854312)
+bones/63/rotation = Quaternion(-7.388046e-09, 1, 2.9802322e-08, 1.9838653e-08)
+
+[node name="AnimationPlayer" parent="Superhero_Male_FullBody" index="1" unique_id=325535253]
+libraries/Enemy_Animation = SubResource("AnimationLibrary_nenq2")
+libraries/UAL1_Standard = ExtResource("4_xwavj")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=149609827]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9371582, 0)
+shape = SubResource("CylinderShape3D_c4w8v")
+
+[editable path="Superhero_Male_FullBody"]

@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dyfa1gd4e3o1v"
+path="res://.godot/imported/Roof_Straight_Corner_Outer_Eave.obj-f7546e6b40cf5d94635ce2046c5b1105.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Roof_Straight_Corner_Outer_Eave.obj-f7546e6b40cf5d94635ce2046c5b1105.mesh"]
+
+source_file="res://assets/Modular Village/Roof_Straight_Corner_Outer_Eave.obj"
+dest_files=["res://.godot/imported/Roof_Straight_Corner_Outer_Eave.obj-f7546e6b40cf5d94635ce2046c5b1105.mesh", "res://.godot/imported/Roof_Straight_Corner_Outer_Eave.obj-f7546e6b40cf5d94635ce2046c5b1105.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false
