@@ -2,9 +2,9 @@
 .godot/
 .nomedia
 
-Sky/
-Superhero/
-zombie/
+assets/Sky/
+assets/Superhero/
+assets/zombie/
 # Godot-specific ignores
 .import/
 export.cfg
